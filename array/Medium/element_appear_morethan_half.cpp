@@ -35,7 +35,7 @@ int element_appear_morethan_half_using_hashing(vector<int> &arr){
     return -1;
 }
 int majority_element(vector<int> &arr){
-    // Time Complexity: O(N2), where N = size of the given array. Reason: For every element of the array the inner loop runs for N times.
+    // Time Complexity: O(N^2), where N = size of the given array. Reason: For every element of the array the inner loop runs for N times.
     //  And there are N elements in the array. So, the total time complexity is O(N2).
     //   Space Complexity: O(1) as we use no extra space.
 
