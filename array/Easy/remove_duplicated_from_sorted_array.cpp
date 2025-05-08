@@ -37,3 +37,46 @@ int main(){
     return 0;
 }
 
+
+#include <vector>
+using namespace std;
+
+vector<int> remove_dup_pointers(vector<int> arr) {
+    // If array is empty, return empty array
+    if (arr.empty()) return arr;
+    
+    // Sort the array first to group duplicates together
+    sort(arr.begin(), arr.end());
+    
+    // Initialize write pointer
+    int writeIndex = 0;
+    
+    // Iterate through the array
+    for (int readIndex = 1; readIndex < arr.size(); readIndex++) {
+        // If current element is different from the last unique element
+        if (arr[readIndex] != arr[writeIndex]) {
+            // Move write pointer and update with new unique element
+            writeIndex++;
+            arr[writeIndex] = arr[readIndex];
+        }
+    }
+    
+    // Resize the array to keep only unique elements
+    arr.resize(writeIndex + 1);
+    
+    return arr;
+}
+
+int main() {
+    vector<int> arr = {1, 1, 2, 3, 4, 4, 4, 8, 8};
+    
+    // Remove duplicates
+    vector<int> ans = remove_dup_pointers(arr);
+    
+    // Print the result
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << " ";
+    }
+    
+    return 0;
+}

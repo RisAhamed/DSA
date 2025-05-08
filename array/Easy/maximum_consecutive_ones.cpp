@@ -23,7 +23,7 @@ int findMaxConsecutiveOnes(vector<int>& nums) {
             start = end + 1; // Move start after the 0
         } else {
             maxCount = max(maxCount, end - start + 1);
-        }
+        } 
     }
     return maxCount;
 }

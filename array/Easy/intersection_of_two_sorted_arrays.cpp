@@ -31,7 +31,7 @@ void print_vector(vector<int> &arr){
 }
 
 
-;void intersection_of_two_sorted_array_using_two_pointer(vector<int> &arr1, vector<int> &arr2){
+void intersection_of_two_sorted_array_using_two_pointer(vector<int> &arr1, vector<int> &arr2){
     // time complexity = O(n1+n2)
     // space complexity = O(1) and for returning the answer O(n1+n2) in the worst case 
     int i=0;
